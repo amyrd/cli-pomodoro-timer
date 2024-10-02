@@ -1,50 +1,66 @@
 ```markdown
 # Pomodoro Timer with Sessions and Voice Notification
 
-This script is inspired by BashBunni's Pomodoro timer and enhanced with extra features such as multiple sessions and a voice line from *Serial Experiments Lain*. It uses `timer` for Pomodoro intervals and `terminal-notifier` for macOS notifications.
+This script is a custom Pomodoro timer inspired by BashBunni's implementation, with added features like session control and voice notifications from *Serial Experiments Lain*. It uses `timer` for Pomodoro intervals and `terminal-notifier` for macOS desktop alerts.
 
 ## Features
-- Set the number of Pomodoro sessions
-- Voice notification using a famous line from *Serial Experiments Lain*
-- macOS notifications when each session starts or ends
+
+- **Multiple Sessions**: Choose how many Pomodoro work/rest cycles to complete.
+- **Voice Notifications**: 
+  -  A "wired" notification voiced by Whisper. (Featuring VA from serial experiments lain omg!)
+- **Desktop Notifications**: Get macOS notifications for both work and break periods with custom icons and sounds.
 
 ## Requirements
-- macOS
-- [timer](https://github.com/caarlos0/timer) 
-  ```bash
-  brew install caarlos0/tap/timer
-  ```
-- [terminal-notifier](https://github.com/julienXX/terminal-notifier) 
-  ```bash
-  brew install terminal-notifier
-  ```
+
+1. **macOS**: This script is designed for macOS.
+2. **timer**: Install the `timer` utility for Pomodoro intervals.
+   ```bash
+   brew install caarlos0/tap/timer
+   ```
+3. **terminal-notifier**: For desktop notifications.
+   ```bash
+   brew install terminal-notifier
+   ```
 
 ## Usage
 
-1. Clone the script or download it.
-2. Make it executable:
+1. **Clone or download the script**.
+2. **Make it executable**:
    ```bash
    chmod +x your-script.sh
    ```
-3. Run the script with the desired number of Pomodoro sessions:
+3. **Run the script** with your work/rest durations (in seconds):
    ```bash
-   ./your-script.sh <number_of_sessions>
-   ```
-   
-   Example:
-   ```bash
-   ./your-script.sh 4
+   ./your-script.sh <work_duration> <rest_duration>
    ```
 
-4. When a session ends, you will hear a notification sound from *Serial Experiments Lain* and get a desktop notification 
+   Example:
+   ```bash
+   ./your-script.sh 1500 300
+   ```
+   **add it to your .zshrc so you can just do "pomo 1h 5m" to start it.**
+
+   This runs a 25-minute work session and a 5-minute break.
+
+4. **Set the number of sessions** when prompted.
+
+## Notifications
+
+- **Work Session**: 
+  - A desktop notification will display a custom image with the message "やった！休憩してね～" ("Yay! Take a break!").
+  - Kyoko will announce "やった！休憩しよう！～".
+  
+- **Break Session**:
+  - A notification will say "Break is over! Get back to work".
+  - Whisper will announce "Time to enter the wired again".
 
 ## Customization
 
-- **Number of sessions**: The script will prompt for how many sessions you'd like to complete.
-- **Voice line**: A line from *Serial Experiments Lain* plays when the session ends, adding a touch of anime inspiration.
+You can change notification messages, icons, and sounds by editing the script.
 
 ## License
+
 MIT License
 ```
 
-Feel free to adjust based on how your script functions!
+Feel free to modify any details based on your exact setup or script structure.
