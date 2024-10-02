@@ -38,11 +38,17 @@ This script is a custom Pomodoro timer inspired by BashBunni's implementation, w
    ```bash
    ./your-script.sh 1500 300
    ```
-   **add it to your .zshrc so you can just do "pomo 1h 5m" to start it.**
 
-   This runs a 25-minute work session and a 5-minute break.
+4. **Optional**: Add it to your `.zshrc` for easy access:
+   ```bash
+   echo 'alias pomo="~/path-to-script/your-script.sh"' >> ~/.zshrc
+   ```
+   Now you can start the timer by typing:
+   ```bash
+   pomo 1500 300
+   ```
 
-4. **Set the number of sessions** when prompted.
+5. **Set the number of sessions** when prompted.
 
 ## Notifications
 
@@ -62,5 +68,3 @@ You can change notification messages, icons, and sounds by editing the script.
 
 MIT License
 ```
-
-Feel free to modify any details based on your exact setup or script structure.
