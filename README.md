@@ -1,4 +1,4 @@
-```markdown
+
 # Pomodoro Timer with Sessions and Voice Notification
 
 This script is a custom Pomodoro timer inspired by BashBunni's implementation, with added features like session control and voice notifications from *Serial Experiments Lain*. It uses `timer` for Pomodoro intervals and `terminal-notifier` for macOS desktop alerts.
@@ -16,7 +16,7 @@ This script is a custom Pomodoro timer inspired by BashBunni's implementation, w
 2. **timer**: Install the `timer` utility for Pomodoro intervals.
    ```bash
    brew install caarlos0/tap/timer
-   ```
+  
 3. **terminal-notifier**: For desktop notifications.
    ```bash
    brew install terminal-notifier
